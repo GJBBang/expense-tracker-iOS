@@ -45,6 +45,9 @@
                                         <color key="tintColor" systemColor="systemTealColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vlQ-E1-lVs"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgX-6K-NVK">
                                         <rect key="frame" x="0.0" y="240.00000000000006" width="342" height="28.666666666666686"/>
@@ -82,6 +85,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nvS-wB-ur1"/>
+                    <connections>
+                        <outlet property="password" destination="Qgu-uc-v2C" id="d5g-F2-4E4"/>
+                        <outlet property="userName" destination="x7o-V4-amq" id="7dr-OH-4A7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,7 +187,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="h8w-QH-EXm"/>
+        <segue reference="Pni-BH-Rki"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
