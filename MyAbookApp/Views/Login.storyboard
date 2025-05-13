@@ -97,7 +97,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="DlX-C8-CwA">
             <objects>
-                <viewController id="No3-g9-Mrr" userLabel="Sign Up View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="No3-g9-Mrr" userLabel="Sign Up View Controller" customClass="SignUpViewController" customModule="MyAbookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IHt-tz-fdR">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,6 +149,9 @@
                                         <color key="tintColor" systemColor="systemTealColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign Up" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="signupButtonTapped:" destination="No3-g9-Mrr" eventType="touchUpInside" id="uqO-Ma-ld1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0o-wI-Mep">
                                         <rect key="frame" x="0.0" y="400" width="342" height="35"/>
@@ -180,6 +183,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s8m-aJ-5jH"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="91C-hS-T5q" id="PA7-AW-m1n"/>
+                        <outlet property="emailTextField" destination="yAa-VS-Iyi" id="T7k-Tb-sh0"/>
+                        <outlet property="passwordTextField" destination="7Bk-so-9ol" id="YsF-7x-ROF"/>
+                        <outlet property="userNameTextField" destination="bzn-Ya-0An" id="ZpZ-P4-U0I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rh-Vo-MNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
