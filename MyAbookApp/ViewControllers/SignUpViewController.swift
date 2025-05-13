@@ -38,11 +38,27 @@ class SignUpViewController: UIViewController {
     }
 
     func signUpAPI(request: SignUpRequest) {
-        guard let url = URL(string: "https://localhost:8080/api/v1/members/join") else { return }
+        guard let url = URL(string: "http://localhost:8080/api/v1/members/join") else {
+            print("잘못된 URL")
+            return
+        }
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        // Basic Authentication을 위한 ID와 비밀번호 결합
+        let username = "user"
+        let password = "123123"
+        let credentials = "\(username):\(password)"
+        
+        // Base64로 인코딩
+        if let encodedCredentials = credentials.data(using: .utf8)?.base64EncodedString() {
+            // Authorization 헤더에 Basic 인증 정보 추가
+            urlRequest.addValue("Basic \(encodedCredentials)", forHTTPHeaderField: "Authorization")
+        }
+        
+        print(url)
 
         do {
             let jsonData = try JSONEncoder().encode(request)
@@ -63,23 +79,27 @@ class SignUpViewController: UIViewController {
                 return
             }
 
-            do {
-                let response = try JSONDecoder().decode(SignUpResponse.self, from: data)
-                DispatchQueue.main.async {
-                    if response.success {
-                        print("로그인 성공. 토큰: \(response.token ?? "")")
-                        // 다음 화면으로 이동하거나 토큰 저장 등 작업 수행
-                    } else {
-                        print("로그인 실패: \(response.message ?? "알 수 없는 오류")")
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                do {
+                    let response = try JSONDecoder().decode(SignUpResponse.self, from: data)
+                    DispatchQueue.main.async {
+                        if response.success {
+                            print("회원 가입 성공. 토큰: \(response.token ?? "")")
+                        } else {
+                            print("회원 가입 실패: \(response.message ?? "알 수 없는 오류")")
+                        }
                     }
+                } catch {
+                    print("응답 디코딩 실패: \(error)")
                 }
-            } catch {
-                print("응답 디코딩 실패: \(error)")
+            } else {
+                print("서버 응답 오류. 상태 코드: \(String(describing: (response as? HTTPURLResponse)?.statusCode))")
             }
         }
 
         task.resume()
     }
+
 }
 
 

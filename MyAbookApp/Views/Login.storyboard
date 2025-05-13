@@ -86,8 +86,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="nvS-wB-ur1"/>
                     <connections>
-                        <outlet property="password" destination="Qgu-uc-v2C" id="d5g-F2-4E4"/>
-                        <outlet property="userName" destination="x7o-V4-amq" id="7dr-OH-4A7"/>
+                        <outlet property="passwordTextField" destination="Qgu-uc-v2C" id="Nf9-eo-czM"/>
+                        <outlet property="userNameTextField" destination="x7o-V4-amq" id="5MS-lk-E2Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -150,7 +150,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign Up" cornerStyle="capsule"/>
                                         <connections>
-                                            <action selector="signupButtonTapped:" destination="No3-g9-Mrr" eventType="touchUpInside" id="uqO-Ma-ld1"/>
+                                            <action selector="signUpButtonTapped:" destination="No3-g9-Mrr" eventType="touchUpInside" id="vrr-x3-iUS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0o-wI-Mep">
@@ -196,7 +196,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Pni-BH-Rki"/>
+        <segue reference="h8w-QH-EXm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
