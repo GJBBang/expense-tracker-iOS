@@ -35,7 +35,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Muv-ba-MaW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QB-T6-3SM">
                                         <rect key="frame" x="0.0" y="160.00000000000006" width="342" height="50"/>
@@ -130,7 +130,7 @@
                                             <constraint firstAttribute="height" constant="50" id="7e5-sZ-7r2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91C-hS-T5q" userLabel="Confirm Password">
                                         <rect key="frame" x="0.0" y="240" width="342" height="50"/>
@@ -139,7 +139,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Lum-jX-fSD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppl-VZ-3qE">
                                         <rect key="frame" x="0.0" y="320" width="342" height="50"/>
@@ -196,7 +196,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="h8w-QH-EXm"/>
+        <segue reference="Pni-BH-Rki"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
